@@ -9,16 +9,18 @@ Hope it's helpful!
 			 can be implemented with socket.io**
 
 ### Steps :
+1. Install node modules
 ```sh
-1. npm install
+npm install
 ```
-2) change the secret in the config.js ( or not .. up to you !)
+2. change the secret in the config.js ( or not .. up to you !)
 
+3. Start server
 ```sh
 node server.js
 ```
-4) go to localhost:3000/users/create on web page
-5) go to localhost:3000/ and login with one of these users :
+4. go to localhost:3000/users/create on web page
+5. go to localhost:3000/ and login with one of these users :
 
 
     username: johndoe@gmail.com
