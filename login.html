@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login to Node app</title>
+</head>
+<body>
+	<h1 id="message">Yo!</h1>
+	<form id="login-form" action="login_submit" method="post" accept-charset="utf-8">
+		<input id="email" type="email" name="email" value="" placeholder="example@email.com"/>
+		<input id="password" type="password" name="password" value="" placeholder="password"/>
+		<input type="submit" name="submit" value="login"/>
+	</form>
+</body>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			$('form').submit(function(e){
+				e.preventDefault();
+				console.log('sending post request!');
+				$.ajax({
+					method: "POST",
+  					url: "auth",
+  					data: $(this).serialize()
+				}).done(function(msg){
+					
+					var data = msg;
+
+					if(data.error === true){
+						console.log(data.message);
+						$('h1').text(data.message);
+					}else{
+						localStorage.setItem('token',data.token);
+						window.location.href='/home';	
+					}
+					
+				});
+			});
+		});
+	</script>
+</html>
