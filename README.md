@@ -9,19 +9,19 @@ Hope it's helpful!
 			 can be implemented with socket.io**
 
 ### Steps :
+
 1. Install node modules
-```sh
-npm install
-```
+	```sh
+	npm install
+	```
 2. change the secret in the config.js ( or not .. up to you !)
 
 3. Start server
-```sh
-node server.js
-```
+	```sh
+	node server.js
+	```
 4. go to localhost:3000/users/create on web page
 5. go to localhost:3000/ and login with one of these users :
-
 
     username: johndoe@gmail.com
 	password: secret
@@ -29,4 +29,4 @@ node server.js
 	username : janedoe@gmail.com
 	password : secret
    
-6) Chat ON!
+6. Chat ON!
