@@ -75,6 +75,7 @@ app.get('/users/create',function(req,res){
 
 	user.save(function(err){
 	 if(err!=null) throw err;
+	 console.log('John Doe created');
 	});
 
 
@@ -85,6 +86,7 @@ app.get('/users/create',function(req,res){
 
 	jane.save(function(err){
 		if(err!=null) throw err;
+		console.log('Jane Doe created');
 	});
 });
 
